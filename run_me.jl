@@ -1,9 +1,8 @@
-include("./DataTestTypes.jl")
-include("./Connectivity.jl")
-using .DataTestTypes: Block
-using .Connectivity: add_blocks
+import Pkg
 
+include("DataTestTypes.jl")
+include("Connectivity.jl")
 
-b1 = Block(1,2)
-b2 = Block(1,2)
-add_blocks(b1,b2)
+b1 = DataTestTypes.Block(1,2)
+b2 = DataTestTypes.Block(1,2)
+Connectivity.add_blocks(b1,b2)
